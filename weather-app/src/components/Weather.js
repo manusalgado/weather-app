@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class Title extends Component {
+class Weather extends Component {
   render() {
     return (
     <div>
-      I am the Title
+      I am the Weather
     </div>
     );
   }
 }
 
-export default Title;
+export default Weather;

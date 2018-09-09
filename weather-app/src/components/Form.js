@@ -3,9 +3,11 @@ import React, { Component } from 'react'
 class Form extends Component {
   render() {
     return (
-    <React.Fragment>
-      I am the Form
-    </React.Fragment>
+    <form>
+        <input type="text" placeholder="City..." name="city"/>
+        <input type="text" placeholder="Country..." name="country"/>
+        <button>Get weather</button>
+    </form>
     );
   }
 }
