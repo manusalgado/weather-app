@@ -12,8 +12,9 @@ const API_KEY = "4d9a86a353daf89c397e353effdc0d9f";
 
 class App extends Component {
 
-getWeather = async () => {
-  const api_call = await fetch(`https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=${API_KEY}`)
+getWeather = async (e) => {
+  e.preventDefault()
+  const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=München,DE&appid=${API_KEY}&units=metric`)
   const data = await api_call.json()
   console.log(data);
   
@@ -23,7 +24,7 @@ getWeather = async () => {
     return (
       <React.Fragment>
        <Title/>
-       <Form/>
+       <Form getWeather={this.getWeather}/>
        <Weather/>
       </React.Fragment>
     );
