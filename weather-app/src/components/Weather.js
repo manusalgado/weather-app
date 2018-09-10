@@ -4,7 +4,14 @@ class Weather extends Component {
   render() {
     return (
     <div>
-      I am the Weather
+      <miComponent>
+        {this.props.city}
+        {this.props.country}
+        {this.props.humidity}
+        {this.props.description}
+        {this.props.temperature}
+        {this.props.error}
+      </miComponent>
     </div>
     );
   }
